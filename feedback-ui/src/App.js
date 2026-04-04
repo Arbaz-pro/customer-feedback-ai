@@ -8,25 +8,30 @@ function App() {
   const [result, setResult] = useState(null);
   const [page, setPage] = useState("select");
 
-  const handleSubmit = async () => {
-    
-    const res = await fetch("http://127.0.0.1:8000/analyze",{
-    // const res = await fetch("https://feedback-backend-2j31.onrender.com/analyze", {
+ const handleSubmit = async () => {
+  try {
+    const res = await fetch("https://feedback-backend-2j31.onrender.com/analyze", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      
       body: JSON.stringify({
         comment,
         rating: rating || 1,
       }),
     });
 
+    if (!res.ok) {
+      throw new Error("Server error");
+    }
+
     const data = await res.json();
     setResult(data);
-    // console.log("SENDING:", comment, rating);
-  };
+  } catch (error) {
+    console.error("ERROR:", error);
+    alert("Backend not reachable / CORS issue / server down");
+  }
+};
 
   return (
  <div>
