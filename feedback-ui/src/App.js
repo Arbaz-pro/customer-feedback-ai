@@ -11,6 +11,7 @@ function App() {
  const handleSubmit = async () => {
   try {
     const res = await fetch("https://feedback-backend-2j31.onrender.com/analyze", {
+      // const res = await fetch("http://127.0.0.1:8000/analyze", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

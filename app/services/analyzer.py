@@ -36,9 +36,9 @@ def analyze_comment(comment: str):
     return results
 def calculate_rating(aspects):
     score_map = {
-        "positive": 1,
-        "neutral": 0,
-        "negative": -1
+        "Positive": 1,
+        "Neutral": 0,
+        "Negative": -1
     }
 
     if not aspects:
