@@ -7,12 +7,15 @@ classifier = None
 def get_classifier():
     global classifier
     if classifier is None:
-        from transformers import pipeline  # ✅ move inside
+        print("Starting model download...")
+        from transformers import pipeline
+        print("Transformers imported")
         classifier = pipeline(
             "text-classification",
             model="Arbaz04/aspect_model",
             tokenizer="Arbaz04/aspect_model"
         )
+        print("Model loaded!")
     return classifier
 
 label_map_reverse = {

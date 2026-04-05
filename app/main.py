@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi import Request
 from pydantic import BaseModel
+from app.models.intent_model import get_classifier
 from app.services.analyzer import analyze_comment, calculate_rating,generate_response
 from app.services.db_service import save_feedback, fetch_feedback
 from app.services.db_service import save_feedback, fetch_feedback, get_dashboard_data,get_reviews_data
@@ -20,6 +21,9 @@ print("APP STARTING...")
 def startup_event():
     print("STARTUP RUNNING...")
     create_table()
+    get_classifier()  # Preload model on startup
+    print("model STARTUP COMPLETE!")
+    
 class CommentRequest(BaseModel):
     comment: str
     rating: Optional[int] = None
