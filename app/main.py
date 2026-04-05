@@ -1,4 +1,4 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI
 from fastapi import Request
 from pydantic import BaseModel
 from app.services.analyzer import analyze_comment, calculate_rating,generate_response
@@ -13,7 +13,13 @@ from sqlalchemy import text
 
 app = FastAPI()
 
-create_table()
+print("APP STARTING...")
+
+
+@app.on_event("startup")
+def startup_event():
+    print("STARTUP RUNNING...")
+    create_table()
 class CommentRequest(BaseModel):
     comment: str
     rating: Optional[int] = None

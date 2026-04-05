@@ -1,5 +1,5 @@
 
-from transformers import pipeline
+
 
 # Load trained transformer model
 classifier = None
@@ -7,7 +7,7 @@ classifier = None
 def get_classifier():
     global classifier
     if classifier is None:
-        from transformers import pipeline
+        from transformers import pipeline  # ✅ move inside
         classifier = pipeline(
             "text-classification",
             model="Arbaz04/aspect_model",
