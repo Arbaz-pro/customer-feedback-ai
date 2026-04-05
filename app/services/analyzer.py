@@ -8,7 +8,7 @@ import re
 
 def split_into_parts(comment: str):
     parts = re.split(r'\bbut\b|\band\b|\bhowever\b|\balthough\b|,|\.', comment)
-    return [p.strip() for p in parts if p.strip()]\
+    return [p.strip() for p in parts if p.strip()]
 
 def analyze_comment(comment: str):
     comment = comment.lower()
