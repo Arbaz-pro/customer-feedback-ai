@@ -263,3 +263,23 @@ data = [
 ("app is extremely slow", ["App_Experience"]),
 ("website is extremely slow", ["App_Experience"])
 ]
+
+label_map = {
+    "Delivery": 0,
+    "Product_Quality": 1,
+    "Price": 2,
+    "Packaging": 3,
+    "Customer_Service": 4,
+    "App_Experience": 5
+}
+converted_data = []
+
+for text, labels in data:
+    converted_data.append({
+        "text": text.lower().strip(),
+        "label": label_map[labels[0]]
+    })
+import json
+
+with open("converted_aspect_data.json", "w") as f:
+    json.dump(converted_data, f, indent=2)

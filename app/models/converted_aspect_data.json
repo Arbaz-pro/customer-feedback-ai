@@ -1,0 +1,1074 @@
+[
+  {
+    "text": "delivery was late",
+    "label": 0
+  },
+  {
+    "text": "product quality is amazing",
+    "label": 1
+  },
+  {
+    "text": "price is too high",
+    "label": 2
+  },
+  {
+    "text": "packaging was bad",
+    "label": 3
+  },
+  {
+    "text": "customer support was helpful",
+    "label": 4
+  },
+  {
+    "text": "app is slow",
+    "label": 5
+  },
+  {
+    "text": "delivery was late",
+    "label": 0
+  },
+  {
+    "text": "delivery arrived late",
+    "label": 0
+  },
+  {
+    "text": "my delivery was delayed",
+    "label": 0
+  },
+  {
+    "text": "late delivery service",
+    "label": 0
+  },
+  {
+    "text": "delivery took too long",
+    "label": 0
+  },
+  {
+    "text": "delivery was late",
+    "label": 0
+  },
+  {
+    "text": "delivery arrived late",
+    "label": 0
+  },
+  {
+    "text": "my delivery was delayed",
+    "label": 0
+  },
+  {
+    "text": "late delivery service",
+    "label": 0
+  },
+  {
+    "text": "delivery took too long",
+    "label": 0
+  },
+  {
+    "text": "delivery was slow",
+    "label": 0
+  },
+  {
+    "text": "slow delivery",
+    "label": 0
+  },
+  {
+    "text": "shipping was very slow",
+    "label": 0
+  },
+  {
+    "text": "delivery took many days",
+    "label": 0
+  },
+  {
+    "text": "delivery is extremely slow",
+    "label": 0
+  },
+  {
+    "text": "i received my order late",
+    "label": 0
+  },
+  {
+    "text": "my order came very late",
+    "label": 0
+  },
+  {"text": "delivery was late", "label": 0},
+  {"text": "product quality is amazing", "label": 1},
+  {"text": "price is too high", "label": 2},
+  {"text": "packaging was damaged", "label": 3},
+  {"text": "customer support was rude", "label": 4},
+  {"text": "app keeps crashing", "label": 5},
+  {"text": "feels like cheap plastic", "label": 1},
+  {"text": "material feels cheap", "label": 1},
+  {"text": "low quality build", "label": 1},
+  {"text": "plastic quality is bad", "label": 1},
+  {"text": "product feels fragile", "label": 1},
+  {"text": "cheap price but good quality", "label": 2},
+  {"text": "cheap material and bad quality", "label": 1},
+  {"text": "low price but excellent product", "label": 2},
+  {"text": "high price and poor quality", "label": 1},
+  {"text": "delivery was trash ngl", "label": 0},
+  {"text": "app is laggy af", "label": 5},
+  {"text": "this product is lit", "label": 1},
+  {"text": "support is useless bro", "label": 4},
+  {"text": "overpriced garbage", "label": 2},
+  {
+    "text": "order delivery was delayed",
+    "label": 0
+  },
+  {
+    "text": "got my order on time",
+    "label": 0
+  },
+  {
+    "text": "order arrived quickly",
+    "label": 0
+  },
+  {
+    "text": "product is good",
+    "label": 1
+  },
+  {
+    "text": "product quality is good",
+    "label": 1
+  },
+  {
+    "text": "product is bad",
+    "label": 1
+  },
+  {
+    "text": "poor product quality",
+    "label": 1
+  },
+  {
+    "text": "excellent product quality",
+    "label": 1
+  },
+  {
+    "text": "product is good",
+    "label": 1
+  },
+  {
+    "text": "product quality is good",
+    "label": 1
+  },
+  {
+    "text": "product is bad",
+    "label": 1
+  },
+  {
+    "text": "poor product quality",
+    "label": 1
+  },
+  {
+    "text": "excellent product quality",
+    "label": 1
+  },
+  {
+    "text": "very good quality product",
+    "label": 1
+  },
+  {
+    "text": "amazing product quality",
+    "label": 1
+  },
+  {
+    "text": "excellent item",
+    "label": 1
+  },
+  {
+    "text": "product is \u0936\u093e\u0928\u0926\u093e\u0930",
+    "label": 1
+  },
+  {
+    "text": "really satisfied with the product",
+    "label": 1
+  },
+  {
+    "text": "product quality is poor",
+    "label": 1
+  },
+  {
+    "text": "very bad product",
+    "label": 1
+  },
+  {
+    "text": "item is \u0916\u0930\u093e\u092c",
+    "label": 1
+  },
+  {
+    "text": "product broke quickly",
+    "label": 1
+  },
+  {
+    "text": "low quality item",
+    "label": 1
+  },
+  {
+    "text": "product quality is poor",
+    "label": 1
+  },
+  {
+    "text": "very bad product",
+    "label": 1
+  },
+  {
+    "text": "item is \u0916\u0930\u093e\u092c",
+    "label": 1
+  },
+  {
+    "text": "product broke quickly",
+    "label": 1
+  },
+  {
+    "text": "low quality item",
+    "label": 1
+  },
+  {
+    "text": "product stopped working",
+    "label": 1
+  },
+  {
+    "text": "item is not working properly",
+    "label": 1
+  },
+  {
+    "text": "product is defective",
+    "label": 1
+  },
+  {
+    "text": "product is damaged",
+    "label": 1
+  },
+  {
+    "text": "item doesn't function well",
+    "label": 1
+  },
+  {
+    "text": "this product is worth it",
+    "label": 1
+  },
+  {
+    "text": "not satisfied with the product",
+    "label": 1
+  },
+  {
+    "text": "product quality could be better",
+    "label": 1
+  },
+  {
+    "text": "i love this product",
+    "label": 1
+  },
+  {
+    "text": "this item is terrible",
+    "label": 1
+  },
+  {
+    "text": "price is high",
+    "label": 2
+  },
+  {
+    "text": "price is too high",
+    "label": 2
+  },
+  {
+    "text": "price is low",
+    "label": 2
+  },
+  {
+    "text": "price is reasonable",
+    "label": 2
+  },
+  {
+    "text": "price is affordable",
+    "label": 2
+  },
+  {
+    "text": "very expensive product",
+    "label": 2
+  },
+  {
+    "text": "too costly",
+    "label": 2
+  },
+  {
+    "text": "price is not worth it",
+    "label": 2
+  },
+  {
+    "text": "overpriced item",
+    "label": 2
+  },
+  {
+    "text": "high price for this product",
+    "label": 2
+  },
+  {
+    "text": "cheap product",
+    "label": 2
+  },
+  {
+    "text": "very affordable price",
+    "label": 2
+  },
+  {
+    "text": "low cost item",
+    "label": 2
+  },
+  {
+    "text": "budget friendly product",
+    "label": 2
+  },
+  {
+    "text": "great price for the product",
+    "label": 2
+  },
+  {
+    "text": "value for money",
+    "label": 2
+  },
+  {
+    "text": "not worth the price",
+    "label": 2
+  },
+  {
+    "text": "worth the money",
+    "label": 2
+  },
+  {
+    "text": "good value for money",
+    "label": 2
+  },
+  {
+    "text": "bad value for money",
+    "label": 2
+  },
+  {
+    "text": "this product is too expensive",
+    "label": 2
+  },
+  {
+    "text": "i think the price is fair",
+    "label": 2
+  },
+  {
+    "text": "price could be lower",
+    "label": 2
+  },
+  {
+    "text": "not satisfied with the price",
+    "label": 2
+  },
+  {
+    "text": "price is justified",
+    "label": 2
+  },
+  {
+    "text": "packaging was good",
+    "label": 3
+  },
+  {
+    "text": "packaging was bad",
+    "label": 3
+  },
+  {
+    "text": "poor packaging",
+    "label": 3
+  },
+  {
+    "text": "excellent packaging",
+    "label": 3
+  },
+  {
+    "text": "packaging was good",
+    "label": 3
+  },
+  {
+    "text": "packaging was bad",
+    "label": 3
+  },
+  {
+    "text": "poor packaging",
+    "label": 3
+  },
+  {
+    "text": "excellent packaging",
+    "label": 3
+  },
+  {
+    "text": "very good packaging",
+    "label": 3
+  },
+  {
+    "text": "amazing packaging",
+    "label": 3
+  },
+  {
+    "text": "excellent box",
+    "label": 3
+  },
+  {
+    "text": "package was damaged",
+    "label": 3
+  },
+  {
+    "text": "box was broken",
+    "label": 3
+  },
+  {
+    "text": "item was not well packaged",
+    "label": 3
+  },
+  {
+    "text": "package arrived in good condition",
+    "label": 3
+  },
+  {
+    "text": "box was intact and secure",
+    "label": 3
+  },
+  {
+    "text": "customer support was helpful",
+    "label": 4
+  },
+  {
+    "text": "customer support was bad",
+    "label": 4
+  },
+  {
+    "text": "poor customer service",
+    "label": 4
+  },
+  {
+    "text": "excellent customer service",
+    "label": 4
+  },
+  {
+    "text": "customer support was helpful",
+    "label": 4
+  },
+  {
+    "text": "customer support was bad",
+    "label": 4
+  },
+  {
+    "text": "poor customer service",
+    "label": 4
+  },
+  {
+    "text": "excellent customer service",
+    "label": 4
+  },
+  {
+    "text": "very good customer service",
+    "label": 4
+  },
+  {
+    "text": "amazing customer support",
+    "label": 4
+  },
+  {
+    "text": "support team was excellent",
+    "label": 4
+  },
+  {
+    "text": "support team was unhelpful",
+    "label": 4
+  },
+  {
+    "text": "not satisfied with customer service",
+    "label": 4
+  },
+  {
+    "text": "i had a great experience with customer support",
+    "label": 4
+  },
+  {
+    "text": "the support team was terrible",
+    "label": 4
+  },
+  {
+    "text": "app is slow",
+    "label": 5
+  },
+  {
+    "text": "delivery was late",
+    "label": 0
+  },
+  {
+    "text": "product quality is amazing",
+    "label": 1
+  },
+  {
+    "text": "price is too high",
+    "label": 2
+  },
+  {
+    "text": "packaging was bad",
+    "label": 3
+  },
+  {
+    "text": "customer support was helpful",
+    "label": 4
+  },
+  {
+    "text": "app is slow",
+    "label": 5
+  },
+  {
+    "text": "delivery was late",
+    "label": 0
+  },
+  {
+    "text": "delivery arrived late",
+    "label": 0
+  },
+  {
+    "text": "my delivery was delayed",
+    "label": 0
+  },
+  {
+    "text": "late delivery service",
+    "label": 0
+  },
+  {
+    "text": "delivery took too long",
+    "label": 0
+  },
+  {
+    "text": "delivery was late",
+    "label": 0
+  },
+  {
+    "text": "delivery arrived late",
+    "label": 0
+  },
+  {
+    "text": "my delivery was delayed",
+    "label": 0
+  },
+  {
+    "text": "late delivery service",
+    "label": 0
+  },
+  {
+    "text": "delivery took too long",
+    "label": 0
+  },
+  {
+    "text": "delivery was slow",
+    "label": 0
+  },
+  {
+    "text": "slow delivery",
+    "label": 0
+  },
+  {
+    "text": "shipping was very slow",
+    "label": 0
+  },
+  {
+    "text": "delivery took many days",
+    "label": 0
+  },
+  {
+    "text": "delivery is extremely slow",
+    "label": 0
+  },
+  {
+    "text": "i received my order late",
+    "label": 0
+  },
+  {
+    "text": "my order came very late",
+    "label": 0
+  },
+  {
+    "text": "order delivery was delayed",
+    "label": 0
+  },
+  {
+    "text": "got my order on time",
+    "label": 0
+  },
+  {
+    "text": "order arrived quickly",
+    "label": 0
+  },
+  {
+    "text": "product is good",
+    "label": 1
+  },
+  {
+    "text": "product quality is good",
+    "label": 1
+  },
+  {
+    "text": "product is bad",
+    "label": 1
+  },
+  {
+    "text": "poor product quality",
+    "label": 1
+  },
+  {
+    "text": "excellent product quality",
+    "label": 1
+  },
+  {
+    "text": "product is good",
+    "label": 1
+  },
+  {
+    "text": "product quality is good",
+    "label": 1
+  },
+  {
+    "text": "product is bad",
+    "label": 1
+  },
+  {
+    "text": "poor product quality",
+    "label": 1
+  },
+  {
+    "text": "excellent product quality",
+    "label": 1
+  },
+  {
+    "text": "very good quality product",
+    "label": 1
+  },
+  {
+    "text": "amazing product quality",
+    "label": 1
+  },
+  {
+    "text": "excellent item",
+    "label": 1
+  },
+  {
+    "text": "product is \u0936\u093e\u0928\u0926\u093e\u0930",
+    "label": 1
+  },
+  {
+    "text": "really satisfied with the product",
+    "label": 1
+  },
+  {
+    "text": "product quality is poor",
+    "label": 1
+  },
+  {
+    "text": "very bad product",
+    "label": 1
+  },
+  {
+    "text": "item is \u0916\u0930\u093e\u092c",
+    "label": 1
+  },
+  {
+    "text": "product broke quickly",
+    "label": 1
+  },
+  {
+    "text": "low quality item",
+    "label": 1
+  },
+  {
+    "text": "product quality is poor",
+    "label": 1
+  },
+  {
+    "text": "very bad product",
+    "label": 1
+  },
+  {
+    "text": "item is \u0916\u0930\u093e\u092c",
+    "label": 1
+  },
+  {
+    "text": "product broke quickly",
+    "label": 1
+  },
+  {
+    "text": "low quality item",
+    "label": 1
+  },
+  {
+    "text": "product stopped working",
+    "label": 1
+  },
+  {
+    "text": "item is not working properly",
+    "label": 1
+  },
+  {
+    "text": "product is defective",
+    "label": 1
+  },
+  {
+    "text": "product is damaged",
+    "label": 1
+  },
+  {
+    "text": "item doesn't function well",
+    "label": 1
+  },
+  {
+    "text": "this product is worth it",
+    "label": 1
+  },
+  {
+    "text": "not satisfied with the product",
+    "label": 1
+  },
+  {
+    "text": "product quality could be better",
+    "label": 1
+  },
+  {
+    "text": "i love this product",
+    "label": 1
+  },
+  {
+    "text": "this item is terrible",
+    "label": 1
+  },
+  {
+    "text": "price is high",
+    "label": 2
+  },
+  {
+    "text": "price is too high",
+    "label": 2
+  },
+  {
+    "text": "price is low",
+    "label": 2
+  },
+  {
+    "text": "price is reasonable",
+    "label": 2
+  },
+  {
+    "text": "price is affordable",
+    "label": 2
+  },
+  {
+    "text": "very expensive product",
+    "label": 2
+  },
+  {
+    "text": "too costly",
+    "label": 2
+  },
+  {
+    "text": "price is not worth it",
+    "label": 2
+  },
+  {
+    "text": "overpriced item",
+    "label": 2
+  },
+  {
+    "text": "high price for this product",
+    "label": 2
+  },
+  {
+    "text": "cheap product",
+    "label": 2
+  },
+  {
+    "text": "very affordable price",
+    "label": 2
+  },
+  {
+    "text": "low cost item",
+    "label": 2
+  },
+  {
+    "text": "budget friendly product",
+    "label": 2
+  },
+  {
+    "text": "great price for the product",
+    "label": 2
+  },
+  {
+    "text": "value for money",
+    "label": 2
+  },
+  {
+    "text": "not worth the price",
+    "label": 2
+  },
+  {
+    "text": "worth the money",
+    "label": 2
+  },
+  {
+    "text": "good value for money",
+    "label": 2
+  },
+  {
+    "text": "bad value for money",
+    "label": 2
+  },
+  {
+    "text": "this product is too expensive",
+    "label": 2
+  },
+  {
+    "text": "i think the price is fair",
+    "label": 2
+  },
+  {
+    "text": "price could be lower",
+    "label": 2
+  },
+  {
+    "text": "not satisfied with the price",
+    "label": 2
+  },
+  {
+    "text": "price is justified",
+    "label": 2
+  },
+  {
+    "text": "packaging was good",
+    "label": 3
+  },
+  {
+    "text": "packaging was bad",
+    "label": 3
+  },
+  {
+    "text": "poor packaging",
+    "label": 3
+  },
+  {
+    "text": "excellent packaging",
+    "label": 3
+  },
+  {
+    "text": "packaging was good",
+    "label": 3
+  },
+  {
+    "text": "packaging was bad",
+    "label": 3
+  },
+  {
+    "text": "poor packaging",
+    "label": 3
+  },
+  {
+    "text": "excellent packaging",
+    "label": 3
+  },
+  {
+    "text": "very good packaging",
+    "label": 3
+  },
+  {
+    "text": "amazing packaging",
+    "label": 3
+  },
+  {
+    "text": "excellent box",
+    "label": 3
+  },
+  {
+    "text": "package was damaged",
+    "label": 3
+  },
+  {
+    "text": "box was broken",
+    "label": 3
+  },
+  {
+    "text": "item was not well packaged",
+    "label": 3
+  },
+  {
+    "text": "package arrived in good condition",
+    "label": 3
+  },
+  {
+    "text": "box was intact and secure",
+    "label": 3
+  },
+  {
+    "text": "customer support was helpful",
+    "label": 4
+  },
+  {
+    "text": "customer support was bad",
+    "label": 4
+  },
+  {
+    "text": "poor customer service",
+    "label": 4
+  },
+  {
+    "text": "excellent customer service",
+    "label": 4
+  },
+  {
+    "text": "customer support was helpful",
+    "label": 4
+  },
+  {
+    "text": "customer support was bad",
+    "label": 4
+  },
+  {
+    "text": "poor customer service",
+    "label": 4
+  },
+  {
+    "text": "excellent customer service",
+    "label": 4
+  },
+  {
+    "text": "very good customer service",
+    "label": 4
+  },
+  {
+    "text": "amazing customer support",
+    "label": 4
+  },
+  {
+    "text": "support team was excellent",
+    "label": 4
+  },
+  {
+    "text": "support team was unhelpful",
+    "label": 4
+  },
+  {
+    "text": "not satisfied with customer service",
+    "label": 4
+  },
+  {
+    "text": "i had a great experience with customer support",
+    "label": 4
+  },
+  {
+    "text": "the support team was terrible",
+    "label": 4
+  },
+  {
+    "text": "app is slow",
+    "label": 5
+  },
+  {
+    "text": "app is fast",
+    "label": 5
+  },
+  {
+    "text": "app is unresponsive",
+    "label": 5
+  },
+  {
+    "text": "app is user-friendly",
+    "label": 5
+  },
+  {
+    "text": "app is slow",
+    "label": 5
+  },
+  {
+    "text": "app is fast",
+    "label": 5
+  },
+  {
+    "text": "app is unresponsive",
+    "label": 5
+  },
+  {
+    "text": "app is user-friendly",
+    "label": 5
+  },
+  {
+    "text": "very slow app performance",
+    "label": 5
+  },
+  {
+    "text": "amazing app experience",
+    "label": 5
+  },
+  {
+    "text": "the app crashes frequently",
+    "label": 5
+  },
+  {
+    "text": "the app is easy to navigate",
+    "label": 5
+  },
+  {
+    "text": "website is slow",
+    "label": 5
+  },
+  {
+    "text": "website is fast",
+    "label": 5
+  },
+  {
+    "text": "website is unresponsive",
+    "label": 5
+  },
+  {
+    "text": "website is user-friendly",
+    "label": 5
+  },
+  {
+    "text": "website is slow",
+    "label": 5
+  },
+  {
+    "text": "website is fast",
+    "label": 5
+  },
+  {
+    "text": "website is unresponsive",
+    "label": 5
+  },
+  {
+    "text": "website is user-friendly",
+    "label": 5
+  },
+  {
+    "text": "very slow website performance",
+    "label": 5
+  },
+  {
+    "text": "amazing website experience",
+    "label": 5
+  },
+  {
+    "text": "the website crashes frequently",
+    "label": 5
+  },
+  {
+    "text": "the website is easy to navigate",
+    "label": 5
+  },
+  {
+    "text": "website is very slow",
+    "label": 5
+  },
+  {
+    "text": "app is very slow",
+    "label": 5
+  },
+  {
+    "text": "app is extremely slow",
+    "label": 5
+  },
+  {
+    "text": "website is extremely slow",
+    "label": 5
+  }
+]

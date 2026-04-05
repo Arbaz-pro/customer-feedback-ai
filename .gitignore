@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# ML Model (VERY IMPORTANT)
+app/models/aspect_model/
+
+# Node (React)
+node_modules/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env
+.env

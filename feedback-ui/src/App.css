@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef2f7;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}

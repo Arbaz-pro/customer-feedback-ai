@@ -1,10 +1,14 @@
+from collections import deque
+
+from numpy import append
+
 from app.models.intent_model import predict_aspects
 from app.models.sentiment_model import predict_sentiment
 import re
 
 def split_into_parts(comment: str):
     parts = re.split(r'\bbut\b|\band\b|\bhowever\b|\balthough\b|,|\.', comment)
-    return [p.strip() for p in parts if p.strip()]
+    return [p.strip() for p in parts if p.strip()]\
 
 def analyze_comment(comment: str):
     comment = comment.lower()
@@ -13,25 +17,37 @@ def analyze_comment(comment: str):
 
     all_aspects = set()
 
-    positive_words = ["good", "great", "excellent", "fast", "amazing", "love", "nice", "friendly", "helpful", "delicious", "clean", "comfortable", "enjoyed", "satisfied", "happy", "recommend"]
-    negative_words = ["bad", "late", "poor", "worst", "slow", "terrible", "rude", "unhelpful", "disgusting", "dirty", "uncomfortable", "horrible", "unsatisfied", "unhappy", "avoid"]
-
     results = []
-
+    combine=deque()
     for part in parts:
-        predicted = predict_aspects(part)
+        cleaned_part = part.replace("the ", "").replace("The ", "")
+        print("CLEANED PART:", cleaned_part)
+        aspect = predict_aspects(part)
+        print(part, aspect)
 
-        for aspect in predicted:
-            sentiment = "neutral"
+        aspect = predict_aspects(part)
+        print(part, aspect)
 
+        if len(re.findall(r'\b\w+\b', cleaned_part)) == 1 or cleaned_part in ["customer service", "app experience", "product quality"]:
+            print("COMBINE:", part)
+            combine.append(aspect)
+        else:
             sentiment = predict_sentiment(part)
 
-            results.append({
-                "aspect": aspect,
-                "sentiment": sentiment
-            })
+            while combine:
+                j = combine.popleft()
+                results.append({
+                "aspect": j,
+                "sentiment": str(sentiment)
+                })
 
-            all_aspects.add(aspect)
+        results.append({
+        "aspect": aspect,
+        "sentiment": str(sentiment)
+        })
+
+        all_aspects.add(aspect)
+        
 
     return results
 def calculate_rating(aspects):
@@ -57,16 +73,16 @@ def calculate_rating(aspects):
 
 def generate_response(aspects):
     for a in aspects:
-        if a["aspect"] == "delivery" and a["sentiment"] == "negative":
+        if a["aspect"] == "Delivery" and a["sentiment"] == "Negative":
             return "Sorry about the delivery delay. We'll improve it."
 
-        if a["aspect"] == "product_quality" and a["sentiment"] == "negative":
+        if a["aspect"] == "Product_Quality" and a["sentiment"] == "Negative":
             return "We’re sorry the product didn’t meet expectations."
 
-        if a["aspect"] == "price" and a["sentiment"] == "negative":
+        if a["aspect"] == "Price" and a["sentiment"] == "Negative":
             return "We understand your concern about pricing."
 
-        if a["aspect"] == "app_experience" and a["sentiment"] == "negative":
+        if a["aspect"] == "App_Experience" and a["sentiment"] == "Negative":
             return "We’ll work on improving the website experience."
 
     return "Thanks for your valuable feedback!"
