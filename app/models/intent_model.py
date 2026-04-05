@@ -47,9 +47,26 @@ def predict_aspects(text: str):
         "inputs": text
     }
 
-    response = requests.post(HF_API_URL, headers=headers, json=payload)
+    response = requests.post(HF_API_URL, headers=headers, json=payload,timeout=10)
     result = response.json()
+    print("HF RAW RESPONSE:", result)
 
+    if "loading" in result.get("error", "").lower():
+        import time
+        time.sleep(2)
+
+        response = requests.post(
+                HF_API_URL,
+                headers=headers,
+                json=payload
+            )
+        result = response.json()
+
+        if isinstance(result, dict):
+            return "Unknown"
+
+    else:
+            return "Unknown"
     # HF returns list of predictions
     output = result[0]
 
