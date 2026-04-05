@@ -19,10 +19,10 @@
 #     return classifier
 import requests
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # Load env (only works locally, safe for Render too)
-load_dotenv()
+# load_dotenv()
 
 HF_API_URL = "https://api-inference.huggingface.co/models/Arbaz04/aspect_model"
 HF_TOKEN = os.getenv("HF_TOKEN")  # store safely in env
