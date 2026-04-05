@@ -19,6 +19,7 @@
 #     return classifier
 import requests
 import os
+import time
 # from dotenv import load_dotenv
 
 # Load env (only works locally, safe for Render too)
@@ -43,36 +44,59 @@ label_map_reverse = {
 }
 
 def predict_aspects(text: str):
-    payload = {
-        "inputs": text
-    }
+    payload = {"inputs": text}
 
-    response = requests.post(HF_API_URL, headers=headers, json=payload,timeout=10)
-    result = response.json()
-    print("HF RAW RESPONSE:", result)
-
-    if "loading" in result.get("error", "").lower():
-        import time
-        time.sleep(2)
-
+    try:
         response = requests.post(
-                HF_API_URL,
-                headers=headers,
-                json=payload
-            )
-        result = response.json()
+            HF_API_URL,
+            headers=headers,
+            json=payload,
+            timeout=10
+        )
 
+        # 🔥 FIX 1: check status code
+        if response.status_code != 200:
+            print("HF STATUS ERROR:", response.status_code, response.text)
+            return "Unknown"
+
+        # 🔥 FIX 2: safe JSON parsing
+        try:
+            result = response.json()
+        except Exception as e:
+            print("JSON ERROR:", response.text)
+            return "Unknown"
+
+        print("HF RAW RESPONSE:", result)
+
+        # 🔥 FIX 3: handle dict errors
         if isinstance(result, dict):
-            return "Unknown"
+            print("HF ERROR:", result)
 
-    else:
-            return "Unknown"
-    # HF returns list of predictions
-    output = result[0]
+            if "loading" in result.get("error", "").lower():
+                time.sleep(2)
 
-    label_index = int(output["label"].split("_")[-1])
-    confidence = output["score"]
+                retry = requests.post(
+                    HF_API_URL,
+                    headers=headers,
+                    json=payload
+                )
 
-    print(text, confidence)
+                try:
+                    result = retry.json()
+                except:
+                    return "Unknown"
 
-    return label_map_reverse[label_index]
+                if isinstance(result, dict):
+                    return "Unknown"
+            else:
+                return "Unknown"
+
+        # ✅ safe now
+        output = result[0]
+
+        label_index = int(output["label"].split("_")[-1])
+        return label_map_reverse.get(label_index, "Unknown")
+
+    except Exception as e:
+        print("HF CALL FAILED:", e)
+        return "Unknown"
