@@ -1,13 +1,22 @@
+print("ran 1")
 from fastapi import FastAPI
-from fastapi import Request
+print("ran 2")
 from pydantic import BaseModel
+print("ran 3")
 from app.services.analyzer import analyze_comment, calculate_rating,generate_response
+print("ran 4")
 from app.services.db_service import save_feedback, fetch_feedback
+print("ran 5")
 from app.services.db_service import save_feedback, fetch_feedback, get_dashboard_data,get_reviews_data
+print("ran 6")
 from typing import Optional
+print("ran 7")
 from app.db.database import create_table,engine
+print("ran 8")
 from fastapi.middleware.cors import CORSMiddleware
+print("ran 9")
 from sqlalchemy import text
+print("ran 10")
 
 
 

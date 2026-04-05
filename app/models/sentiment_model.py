@@ -36,10 +36,18 @@
 
 
 import joblib
-from sqlalchemy import text
+import os
 
-model = joblib.load("sentiment_model.pkl")
-vectorizer = joblib.load("sentiment_vectorizer.pkl")
+# Go UP from app/models → project root
+base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+
+model_path = os.path.join(base_path, "sentiment_model.pkl")
+vectorizer_path = os.path.join(base_path, "sentiment_vectorizer.pkl")
+
+print("MODEL PATH:", model_path)
+
+model = joblib.load(model_path)
+vectorizer = joblib.load(vectorizer_path)
 
 def predict_sentiment(text: str):
     X_test = vectorizer.transform([text])

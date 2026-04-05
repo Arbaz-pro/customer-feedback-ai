@@ -4,7 +4,4 @@ scikit-learn
 numpy
 pandas
 sqlalchemy
-psycopg2-binary
-transformers
-torch
-accelerate	
+psycopg2-binary	
