@@ -20,10 +20,9 @@ def analyze_comment(comment: str):
     results = []
     combine=deque()
     for part in parts:
+        sentiment = "Neutral"  # fallback
         cleaned_part = part.replace("the ", "").replace("The ", "")
         print("CLEANED PART:", cleaned_part)
-        aspect = predict_aspects(part)
-        print(part, aspect)
 
         aspect = predict_aspects(part)
         print(part, aspect)
@@ -39,13 +38,12 @@ def analyze_comment(comment: str):
                 results.append({
                 "aspect": j,
                 "sentiment": str(sentiment)
-                })
+            })
 
-        results.append({
-        "aspect": aspect,
-        "sentiment": str(sentiment)
+            results.append({
+            "aspect": aspect,
+            "sentiment": str(sentiment)
         })
-
         all_aspects.add(aspect)
         
 
