@@ -24,27 +24,27 @@ def analyze_comment(comment: str):
         cleaned_part = part.replace("the ", "").replace("The ", "")
         print("CLEANED PART:", cleaned_part)
 
-        aspect = predict_aspects(part)
-        print(part, aspect)
+        predicted = predict_aspects(part)
+        print(part,predicted)
+        for aspect in predicted:
+            if len(re.findall(r'\b\w+\b', cleaned_part)) == 1 or cleaned_part in ["customer service", "app experience", "product quality"]:
+                print("COMBINE:", part)
+                combine.append(aspect)
+            else:
+                sentiment = predict_sentiment(part)
 
-        if len(re.findall(r'\b\w+\b', cleaned_part)) == 1 or cleaned_part in ["customer service", "app experience", "product quality"]:
-            print("COMBINE:", part)
-            combine.append(aspect)
-        else:
-            sentiment = predict_sentiment(part)
+                while combine:
+                    j = combine.popleft()
+                    results.append({
+                    "aspect": j,
+                    "sentiment": str(sentiment)
+             })
 
-            while combine:
-                j = combine.popleft()
                 results.append({
-                "aspect": j,
+                "aspect": aspect,
                 "sentiment": str(sentiment)
-            })
-
-            results.append({
-            "aspect": aspect,
-            "sentiment": str(sentiment)
         })
-        all_aspects.add(aspect)
+            all_aspects.add(aspect)
         
 
     return results

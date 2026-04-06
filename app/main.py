@@ -2,6 +2,7 @@ print("ran 1")
 from fastapi import FastAPI
 print("ran 2")
 from pydantic import BaseModel
+
 print("ran 3")
 from app.services.analyzer import analyze_comment, calculate_rating,generate_response
 print("ran 4")
@@ -27,6 +28,7 @@ print("APP STARTING...")
 
 @app.on_event("startup")
 def startup_event():
+
     print("STARTUP RUNNING...")
     create_table()
     print("model STARTUP COMPLETE!")
