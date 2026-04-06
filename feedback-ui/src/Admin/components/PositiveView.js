@@ -33,8 +33,13 @@ const sortedData = positiveTrendData
   <div style={{ display: "flex",flexWrap:"wrap", gap: "40px" }}>
     
     {/* BAR CHART */}
-    <div style={{ flex: 2 }}>
-      <ResponsiveContainer width={600} height={420}>
+    <div style={{ flex: 2 ,background: "linear-gradient(135deg, #314982, #1e293b)",padding: "15px",
+  borderRadius: "16px",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+  color: "white",
+  maxWidth: "700px",
+  alignContent: "bottom" }}>
+      <ResponsiveContainer width={700} height={450}>
         <BarChart
           data={positiveAspectData}
           margin={{ top: 20, right: 30, left: 20, bottom: 80 }}
@@ -45,10 +50,14 @@ const sortedData = positiveTrendData
             textAnchor="end"
             interval={0}
             height={80}
+            stroke="#ffffff"
+  tick={{ fill: "#ffffff", fontWeight: "bold" }}
           />
-          <YAxis />
+          <YAxis stroke="#ffffff"
+  tick={{ fill: "#ffffff", fontWeight: "bold"  }}
+          />
           <Tooltip />
-          <Bar dataKey="value" fill="#22c55e">
+          <Bar dataKey="value" fill="#00ff5e">
             <LabelList dataKey="value" position="top" />
           </Bar>
         </BarChart>
@@ -56,8 +65,8 @@ const sortedData = positiveTrendData
     </div>
 
     {/* PIE CHART */}
-    <div style={{ flex: 1 }}>
-      <h3>Positive Distribution</h3>
+    <div style={{ flex: 1, background: "linear-gradient(135deg, #314982, #1e293b)",padding: "15px", }}>
+      <h3 style={{ marginBottom: "10px", color: "white", alignSelf: "left" }}>Positive Distribution</h3>
 
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
@@ -90,7 +99,7 @@ const sortedData = positiveTrendData
     borderRadius: "16px",
     boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
     color: "white",
-    width: "700px",
+    width: "1400px",
   }}>
     <h3 style={{ marginBottom: "20px" }}>
       📈 Positive Trends Over Time

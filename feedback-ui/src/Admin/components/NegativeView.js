@@ -23,7 +23,11 @@ const sortedData = negativeTrendData
   <div style={{ display: "flex",flexWrap:"wrap", gap: "40px" }}>
     
     {/* BAR CHART */}
-    <div style={{ flex: 2 }}>
+    <div style={{flex: 2 ,background: "linear-gradient(135deg, #314982, #1e293b)",padding: "15px",
+  borderRadius: "16px",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+  color: "white",
+  maxWidth: "700px" }}>
       <ResponsiveContainer width={600} height={420}>
         <BarChart
           data={negativeAspectData}
@@ -35,19 +39,22 @@ const sortedData = negativeTrendData
             textAnchor="end"
             interval={0}
             height={80}
+            stroke="#ffffff"
+  tick={{ fill: "#ffffff", fontWeight: "bold"  }}
           />
-          <YAxis />
+          <YAxis stroke="#ffffff"
+  tick={{ fill: "#ffffff", fontWeight: "bold"  }}/>
           <Tooltip />
-          <Bar dataKey="value" fill="#ef4444">
-            <LabelList dataKey="value" position="top" />
+          <Bar dataKey="value" fill="#cc0000">
+            <LabelList dataKey="value" position="top" color="#ffffff" fontWeight="bold"/>
           </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
 
     {/* PIE CHART */}
-    <div style={{ flex: 1 }}>
-      <h3>Negative Distribution</h3>
+    <div style={{ flex: 1,background: "linear-gradient(135deg, #314982, #1e293b)",padding: "15px", }}>
+      <h3 style={{ marginBottom: "10px", color: "white", alignSelf: "left" }}>Negative Distribution</h3>
 
       <ResponsiveContainer width="100%" height={300}>
        <PieChart>
@@ -81,7 +88,7 @@ const sortedData = negativeTrendData
     borderRadius: "16px",
     boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
     color: "white",
-    width: "700px",
+    width: "1400px",
   }}>
     <h3 style={{ marginBottom: "20px" }}>
       📉 Negative Trends Over Time

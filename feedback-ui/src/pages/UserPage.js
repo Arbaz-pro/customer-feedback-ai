@@ -4,28 +4,34 @@ export default function UserPage({ goBack }) {
   return (
     <div style={{
       height: "100vh",
-      background: "#eef2f7",
+      width: "100vw",
+      background: "#507baf",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       fontFamily: "Arial",
+      flexDirection: "column"
+      
     }}>
-      <div>
+    
+        
         <FeedbackForm />
-
-        <button
+<button
           onClick={goBack}
           style={{
             marginTop: "15px",
             padding: "10px",
             borderRadius: "8px",
             border: "none",
-            cursor: "pointer"
+            cursor: "pointer",
+            marginLeft: "-260px",
+alignSelf: "center",
           }}
         >
           ⬅ Back
         </button>
+        
       </div>
-    </div>
+    
   );
 }

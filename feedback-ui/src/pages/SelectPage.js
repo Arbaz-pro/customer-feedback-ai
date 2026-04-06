@@ -5,7 +5,7 @@ export default function SelectPage({ setPage }) {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      background: "#eef2f7",
+      background: "#507baf",
       fontFamily: "Arial"
     }}>
       <div style={{

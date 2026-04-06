@@ -12,20 +12,17 @@ const sortedReviews = [...reviews].sort((a, b) => {
   let aVal = a[sortConfig.key];
   let bVal = b[sortConfig.key];
 
-  // 🔥 Handle date properly
   if (sortConfig.key === "created_at") {
     aVal = new Date(a.created_at);
     bVal = new Date(b.created_at);
   }
 
-  // 🔥 Handle strings
   if (typeof aVal === "string") {
     return sortConfig.direction === "asc"
       ? aVal.localeCompare(bVal)
       : bVal.localeCompare(aVal);
   }
 
-  // 🔥 Numbers
   return sortConfig.direction === "asc"
     ? aVal - bVal
     : bVal - aVal;
@@ -45,10 +42,15 @@ const getArrow = (key) => {
 };
 
 return (
-  <div >
+  <div style={{marginTop: "30px",
+    background: "linear-gradient(135deg, #314982, #1e293b)",
+    padding: "20px",
+    borderRadius: "16px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+    color: "white",}}>
     <h2>All Reviews Data</h2>
 <div style={{ overflowX: "auto" }}>
-    <table style={tableStyle}>
+    <table style={{tableStyle, borderRadius: "10px", overflow: "hidden"}}>
   <thead>
     <tr>
       <th style={thStyle} onClick={() => handleSort("id")}>
@@ -87,16 +89,16 @@ return (
         <tr
           key={i}
           style={{
-            background: i % 2 === 0 ? "#ffffff" : "#f8fafc", // 🔥 zebra striping
+            background: i % 2 === 0 ? "#1e293b" : "#0f172a", // 🔥 zebra striping
             transition: "0.2s"
           }}
           onMouseEnter={(e) =>
-            (e.currentTarget.style.background = "#eef2ff")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.background =
-              i % 2 === 0 ? "#ffffff" : "#f8fafc")
-          }
+  (e.currentTarget.style.background = "#334155")
+}
+onMouseLeave={(e) =>
+  (e.currentTarget.style.background =
+    i % 2 === 0 ? "#1e293b" : "#0f172a")
+}
         >
           <td style={tdStyle}>{r.id}</td>
           <td style={tdStyle}>{r.comment}</td>

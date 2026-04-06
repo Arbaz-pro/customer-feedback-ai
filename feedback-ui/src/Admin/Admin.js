@@ -15,13 +15,13 @@ function Admin() {
   if (!data) return <p>Loading...</p>;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <div style={{ padding: "20px", fontFamily: "Arial",background: "linear-gradient(135deg, #0f172a, #1e293b)" }}>
       <Header setView={setView} />
       <StatsCards data={data} setView={setView} />
 
       {view === "table" && <ReviewTable reviews={reviews} />}
       {view === "overview" && (
-        <OverviewCharts data={data} reviews={reviews} />
+        <OverviewCharts data={data} reviews={reviews} style={{ background: "linear-gradient(135deg, #0f172a, #1e293b)", padding: "15px" }} />
       )}
       {view === "positive" && <PositiveView reviews={reviews} />}
       {view === "negative" && <NegativeView reviews={reviews} />}

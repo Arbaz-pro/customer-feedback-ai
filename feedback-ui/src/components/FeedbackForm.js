@@ -23,12 +23,16 @@ export default function FeedbackForm() {
 };
 
   return (
+    
     <div style={{
-      width: "400px",
-      background: "white",
+      
+      height: "fit-content",
+      maxWidth: "300px",
+      width: "90%",
+      background: "#ffffff",
       borderRadius: "16px",
       padding: "25px",
-      boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+      boxShadow: "0 10px 30px rgb(7, 37, 170)",
     }}>
       <h2 style={{ marginBottom: "5px" }}>Give feedback</h2>
       <p style={{ color: "#666", fontSize: "14px" }}>
@@ -64,7 +68,7 @@ export default function FeedbackForm() {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
         style={{
-          width: "100%",
+          width: "95%",
           padding: "10px",
           borderRadius: "10px",
           border: "1px solid #ccc",
@@ -73,7 +77,7 @@ export default function FeedbackForm() {
       />
 
       {/* Buttons */}
-      <div style={{ display: "flex", gap: "10px" }}>
+      <div style={{ display: "flex", gap: "20px"}}>
         <button
   onClick={handleSubmit}
   disabled={loading}

@@ -28,4 +28,4 @@ export const getTrendData = (list) => {
   }));
 };
 
-export const COLORS = ["#4caf50","#f44336","#ff9800"];
+export const COLORS = ["#f44336","#4caf50","#ff9800"];

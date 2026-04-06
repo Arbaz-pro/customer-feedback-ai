@@ -19,11 +19,24 @@ const sortedData = trendData
   }))
   .sort((a, b) => a.date - b.date);
   return (
-    <div>
-    <div style={{ display: "flex",flexWrap:"wrap", justifyContent: "space-between" }}>
+
+// marginTop: "40px",
+//   background: "linear-gradient(135deg, #0f172a, #1e293b)",
+//   padding: "15px",
+//   borderRadius: "16px",
+//   boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+//   color: "white",
+//   width: "900px",
+
+    <div style={{background: "linear-gradient(135deg, #0f172a, #1e293b)",padding: "15px"}}>
+    <div style={{ display: "flex", justifyContent: "space-between",gap: "40px"}}>
 
     {/* BAR CHART */}
-    <div style={{ flex: 2 }}>
+    <div style={{ flex: 2 ,background: "linear-gradient(135deg, #314982, #1e293b)",padding: "15px",
+  borderRadius: "16px",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+  color: "white",
+  maxWidth: "700px",}}>
       <h3>Aspect Analysis</h3>
       <ResponsiveContainer width={700} height={450}>
       <BarChart data={aspectData} margin={{
@@ -31,25 +44,51 @@ const sortedData = trendData
       right: 60,
       left: 20,
       bottom: 80 }}>
-        <XAxis dataKey="name" angle={30} textAnchor="inherit" interval={0} />
+        <XAxis dataKey="name" angle={30} textAnchor="inherit" interval={0} stroke="#ffffff"
+  tick={{ fill: "#ffffff", fontWeight: "bold" }}/>
 
-        <YAxis />
+        <YAxis stroke="#ffffff"
+  tick={{ fill: "#ffffff", fontWeight: "bold" }}/>
         <Tooltip />
-        <Bar dataKey="value" fill="#4f6df5">
-          <LabelList dataKey="value" position="top" />
-        </Bar>
+        <Bar dataKey="value">
+  {aspectData.map((entry, index) => (
+    <Cell
+      key={`cell-${index}`}
+      fill={[
+        "#38bdf8", // cyan
+        "#22c55e", // green
+        "#f59e0b", // orange
+        "#ef4444", // red
+        "#a78bfa", // purple
+        "#14b8a6"  // teal
+      ][index % 6]}
+    />
+  ))}
+
+  <LabelList dataKey="value" position="top" />
+</Bar>
       </BarChart>
       </ResponsiveContainer>
     </div>
 
     {/* PIE CHART */}
-    <div style={{ flex: 1 }}>
-      <h3>Sentiment Distribution</h3>
+    
+    <div style={{ flex: 1,
+    gap: "20px",
+    display: "flex",
+    flexDirection: "column",   // 🔥 key change
+    alignItems: "center",      // center everything
+    justifyContent: "flex-start",
+    minWidth: "350px",background: "linear-gradient(135deg,  #314982, #1e293b)",padding: "15px",
+  borderRadius: "16px",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.3)",}} >
+      <h3 style={{ marginBottom: "10px", color: "white", alignSelf: "left" }}>Sentiment Distribution</h3>
       <PieChart width={490} height={350}>
         <Pie
           data={sentimentData}
           dataKey="value"
           nameKey="name"
+          
           outerRadius={130}
           label={({ name, percent }) =>
             `${name} ${(percent * 100).toFixed(0)}%`
@@ -71,13 +110,13 @@ const sortedData = trendData
   borderRadius: "16px",
   boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
   color: "white",
-  width: "900px",
+  width: "1400px",
 }}>
   <h3 style={{ marginBottom: "20px" }}>
     📈 Aspect Trends Over Time
   </h3>
 
-  <ResponsiveContainer width={900} height={350}>
+  <ResponsiveContainer width={1400} height={350}>
     <LineChart data={sortedData}>
 
       {/* 🔥 Grid */}
