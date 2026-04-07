@@ -15,9 +15,28 @@ function Admin() {
   if (!data) return <p>Loading...</p>;
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial",background: "linear-gradient(135deg, #0f172a, #1e293b)" }}>
+    <div  style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #0f172a, #1e293b)",
+        padding: "clamp(10px, 3vw, 30px)", // 🔥 responsive padding
+      }}>
+        <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px", // 🔥 consistent spacing
+        }}
+      >
       <Header setView={setView} />
       <StatsCards data={data} setView={setView} />
+
+      <div
+          style={{
+            marginTop: "10px",
+          }}
+        ></div>
 
       {view === "table" && <ReviewTable reviews={reviews} />}
       {view === "overview" && (
@@ -25,6 +44,7 @@ function Admin() {
       )}
       {view === "positive" && <PositiveView reviews={reviews} />}
       {view === "negative" && <NegativeView reviews={reviews} />}
+    </div>
     </div>
   );
 }
