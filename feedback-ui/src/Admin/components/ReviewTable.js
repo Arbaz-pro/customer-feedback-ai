@@ -1,12 +1,30 @@
 import { useState } from "react";
 import { tableStyle, thStyle, tdStyle } from "../styles";
+import { exportCSV } from "./utils/exportUtils";
+import ExportButton from "./utils/exportButton";
 
 export default function ReviewTable({ reviews }) {
   const [sortConfig, setSortConfig] = useState({
   key: null,
   direction: "asc",
 });
-const sortedReviews = [...reviews].sort((a, b) => {
+const [year, setYear] = useState("");
+const [month, setMonth] = useState("");
+const [day, setDay] = useState("");
+const filteredReviews = reviews.filter((r) => {
+  const date = new Date(r.created_at);
+
+  const y = date.getFullYear().toString();
+  const m = (date.getMonth() + 1).toString(); // 1-12
+  const d = date.getDate().toString();
+
+  return (
+    (!year || year === y) &&
+    (!month || month === m) &&
+    (!day || day === d)
+  );
+}); 
+const sortedReviews = [...filteredReviews].sort((a, b) => {
   if (!sortConfig.key) return 0;
 
   let aVal = a[sortConfig.key];
@@ -48,7 +66,51 @@ return (
     borderRadius: "16px",
     boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
     color: "white",}}>
-    <h2>All Reviews Data</h2>
+    <div style={{
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: "15px",
+  flexWrap: "wrap",
+  gap: "10px"
+}}>
+
+  <h2>All Reviews Data</h2>
+
+  <div style={{ display: "flex", gap: "10px" }}>
+
+    {/* YEAR */}
+    <select value={year} onChange={(e) => setYear(e.target.value)}>
+      <option value="">Year</option>
+      {[...new Set(reviews.map(r => new Date(r.created_at).getFullYear()))]
+        .map(y => <option key={y} value={y}>{y}</option>)}
+    </select>
+
+    {/* MONTH */}
+    <select value={month} onChange={(e) => setMonth(e.target.value)}>
+      <option value="">Month</option>
+      {[1,2,3,4,5,6,7,8,9,10,11,12].map(m => (
+        <option key={m} value={m}>{m}</option>
+      ))}
+    </select>
+
+    {/* DAY */}
+    <select value={day} onChange={(e) => setDay(e.target.value)}>
+      <option value="">Day</option>
+      {[...Array(31)].map((_, i) => (
+        <option key={i+1} value={i+1}>{i+1}</option>
+      ))}
+    </select>
+
+    {/* EXPORT BUTTON */}
+    <ExportButton
+      onClick={() =>
+        exportCSV(filteredReviews, "filtered_reviews.csv")
+      }
+    />
+
+  </div>
+</div>
 <div style={{ overflowX: "auto" }}>
     <table style={{tableStyle, borderRadius: "10px", overflow: "hidden"}}>
   <thead>

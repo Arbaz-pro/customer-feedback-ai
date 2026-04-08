@@ -214,7 +214,7 @@ const filteredData = groupData(sortedData, range);
       flexWrap: "wrap",
         }}
   >
-    <h3>📈 Aspect Trends Over Time</h3>
+    <h3>Aspect Trends Over Time</h3>
 
     <div style={{ display: "flex", gap: "8px"}}>
       {["daily", "monthly", "yearly"].map((type) => (

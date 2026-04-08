@@ -12,7 +12,7 @@ export default function Header({ setView }) {
   onMouseLeave={(e) => (e.target.style.opacity = "1")}
   onClick={() => setView("overview")}
 >
-  📊 Admin Dashboard
+  Admin Dashboard
 </h1>
   );
 }

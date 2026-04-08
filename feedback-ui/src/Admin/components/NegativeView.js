@@ -187,7 +187,7 @@ export default function NegativeView({ reviews }) {
           flexWrap: "wrap",
           marginBottom: "10px"
         }}>
-          <h3>📉 Negative Trends Over Time</h3>
+          <h3> Negative Trends Over Time</h3>
 
           <div style={{ display: "flex", gap: "8px" }}>
             {["daily", "monthly", "yearly"].map(type => (
