@@ -257,5 +257,319 @@ data = [
 ("app works fine", "Neutral"),
 ("nothing special about the app", "Neutral"),
 ("interface is normal", "Neutral"),
+# new data
+("it feels pretty solid overall", "Positive"),
+("no real complaints about the quality", "Positive"),
+("seems durable so far", "Positive"),
+("does what I expected without issues", "Positive"),
+("better than I thought honestly", "Positive"),
+
+# Negative (vague)
+("something feels off about it", "Negative"),
+("not as good as I hoped", "Negative"),
+("kind of disappointing after using it", "Negative"),
+("doesn’t feel very reliable", "Negative"),
+("quality could have been better", "Negative"),
+
+# Neutral
+("it's okay I guess", "Neutral"),
+("nothing unusual about it", "Neutral"),
+("pretty standard quality", "Neutral"),
+("it works but nothing impressive", "Neutral"),
+("not a bad deal actually", "Positive"),
+("worth it for what you get", "Positive"),
+("price seems fair", "Positive"),
+("can’t complain at this price", "Positive"),
+
+# Negative
+("feels a bit overpriced", "Negative"),
+("not really worth what I paid", "Negative"),
+("expected more for the price", "Negative"),
+("kind of expensive for this", "Negative"),
+
+# Neutral
+("price is okay I guess", "Neutral"),
+("pretty normal pricing", "Neutral"),
+("nothing special about the price", "Neutral"),
+
+("came sooner than I thought", "Positive"),
+("didn’t have to wait long", "Positive"),
+("arrived without any hassle", "Positive"),
+
+# Negative
+("took longer than expected", "Negative"),
+("had to wait quite a bit", "Negative"),
+("delivery wasn’t very smooth", "Negative"),
+
+# Neutral
+("delivery was fine I guess", "Neutral"),
+("nothing unusual about the delivery", "Neutral"),
+("packaging looked decent", "Positive"),
+("everything was packed nicely enough", "Positive"),
+("no issues with how it was packed", "Positive"),
+
+# Negative
+("packaging could’ve been better", "Negative"),
+("looked a bit careless", "Negative"),
+("wasn’t packed very well", "Negative"),
+
+# Neutral
+("packaging was okay", "Neutral"),
+("nothing special about it", "Neutral"),
+
+("app works smoothly most of the time", "Positive"),
+("easy enough to use", "Positive"),
+("didn’t face any major issues", "Positive"),
+
+# Negative
+("app feels a bit slow sometimes", "Negative"),
+("ran into a few issues", "Negative"),
+("not very smooth experience", "Negative"),
+
+# Neutral
+("app is okay overall", "Neutral"),
+("it works but could be better", "Neutral"),
+("they were helpful enough", "Positive"),
+("got my issue sorted eventually", "Positive"),
+("response was decent", "Positive"),
+
+# Negative
+("support wasn’t very helpful", "Negative"),
+("took too long to respond", "Negative"),
+("didn’t really solve my issue", "Negative"),
+
+# Neutral
+("service was fine I guess", "Neutral"),
+("nothing special about support", "Neutral"),
+("it holds up pretty well over time", "Positive"),
+("no issues so far", "Positive"),
+("feels reliable enough", "Positive"),
+("does the job without trouble", "Positive"),
+("turned out better than expected", "Positive"),
+("seems like decent build quality", "Positive"),
+
+# Negative (indirect)
+("started showing issues pretty soon", "Negative"),
+("not very consistent in performance", "Negative"),
+("feels a bit cheap in hand", "Negative"),
+("doesn't always work as expected", "Negative"),
+("noticed some flaws after using it", "Negative"),
+("kind of underwhelming overall", "Negative"),
+
+# Mixed
+("works fine but doesn’t feel premium", "Neutral"),
+("quality is okay but expected slightly better", "Neutral"),
+("no major issues but not impressive either", "Neutral"),
+("felt like a reasonable purchase", "Positive"),
+("pricing seems justified", "Positive"),
+("not too heavy on the pocket", "Positive"),
+("for the price, it does alright", "Positive"),
+
+# Negative
+("price doesn’t quite match the quality", "Negative"),
+("a bit too much for what it offers", "Negative"),
+("doesn’t feel worth the cost", "Negative"),
+("expected more considering the price", "Negative"),
+
+# Mixed
+("price is okay but not a great deal", "Neutral"),
+("fair pricing but nothing special", "Neutral"),
+("came earlier than I was expecting", "Positive"),
+("delivery process was smooth enough", "Positive"),
+("arrived without any delays", "Positive"),
+
+# Negative
+("had to wait longer than I thought", "Negative"),
+("delivery timing was a bit off", "Negative"),
+("took quite some time to arrive", "Negative"),
+
+# Mixed
+("delivery was okay but not very fast", "Neutral"),
+("arrived on time but packaging delayed things", "Neutral"),("packaging was neat and secure", "Positive"),
+("everything arrived in good condition", "Positive"),
+("packed well enough to avoid damage", "Positive"),
+
+# Negative
+("packaging didn’t feel very secure", "Negative"),
+("box looked slightly damaged", "Negative"),
+("could have been packed more carefully", "Negative"),
+
+# Mixed
+("packaging was fine but not impressive", "Neutral"),
+("nothing wrong but nothing great either", "Neutral"),
+("interface is quite easy to get used to", "Positive"),
+("runs smoothly most of the time", "Positive"),
+("navigation feels simple enough", "Positive"),
+
+# Negative
+("app slows down occasionally", "Negative"),
+("ran into some annoying bugs", "Negative"),
+("not the smoothest experience", "Negative"),
+("takes time to load sometimes", "Negative"),
+
+# Mixed
+("works fine but has small issues", "Neutral"),
+("usable but could be smoother", "Neutral"),
+("they handled the issue fairly well", "Positive"),
+("support was decent enough", "Positive"),
+("eventually got the help I needed", "Positive"),
+
+# Negative
+("response time was quite slow", "Negative"),
+("didn’t get much help from support", "Negative"),
+("issue wasn’t properly resolved", "Negative"),
+
+# Mixed
+("support was okay but took time", "Neutral"),
+("they responded but not very helpful", "Neutral"),
+("I expected a bit more from this", "Negative"),
+("it’s not exactly what I had in mind", "Negative"),
+("I mean... it works I guess", "Neutral"),
+("can’t really complain much", "Positive"),
+("not the best but manageable", "Neutral"),
+("it does the job so I’m okay with it", "Positive"),
+("I’ve seen better honestly", "Negative"),
+("not something I’d get again", "Negative"),
+("it’s alright for now", "Neutral"),
+("no strong opinions about it", "Neutral"),
+("not bad at all", "Positive"),
+("not very good either", "Negative"),
+("not too impressive", "Negative"),
+("not the worst I've seen", "Neutral"),
+("took longer than it should have", "Negative"),
+("was expecting it sooner", "Negative"),
+("had some trouble using it", "Negative"),
+("ran into issues while using the app", "Negative"),
+("not very smooth overall", "Negative"),
+("felt a bit frustrating to use", "Negative"),
+("things didn’t work properly", "Negative"),
+("had issues", "Negative"),
+("faced problems", "Negative"),
+("ran into trouble", "Negative"),
+("was difficult to use", "Negative"),
+("not very convenient", "Negative"),
+("delivery took longer than expected", "Negative"),
+("arrived a bit later than I thought", "Negative"),
+("package came later than expected", "Negative"),
+("delivery was delayed more than expected", "Negative"),
+("didn’t arrive when I expected it to", "Negative"),
+
+# Natural human phrasing
+("had to wait longer than usual", "Negative"),
+("took a while to reach me", "Negative"),
+("came after quite some time", "Negative"),
+("was expecting it sooner", "Negative"),
+("took more time than it should have", "Negative"),
+
+# Subtle / indirect complaints
+("delivery could have been quicker", "Negative"),
+("not the fastest delivery", "Negative"),
+("wasn’t as quick as I hoped", "Negative"),
+("a bit slow in reaching me", "Negative"),
+("felt like it took too long", "Negative"),
+
+# Frustration tone
+("waited longer than I would’ve liked", "Negative"),
+("delay was noticeable", "Negative"),
+("it took longer than usual to arrive", "Negative"),
+("delivery timing wasn’t great", "Negative"),
+
+# Mixed tone (important for realism)
+("delivery was late but product is fine", "Neutral"),
+("arrived late, though everything else was okay", "Neutral"),
+("bit delayed but manageable", "Neutral"),
+("late delivery but not a big issue", "Neutral"),
+
+# Stronger negative
+("delivery was quite delayed", "Negative"),
+("significantly late delivery", "Negative"),
+("way later than expected", "Negative"),
+("unacceptably late delivery", "Negative"),
+("way later than expected", "Negative"),
+("much later than expected", "Negative"),
+("significantly delayed", "Negative"),
+("delay was quite noticeable", "Negative"),
+("took far too long", "Negative"),
+("delivery was quick", "Positive"),
+("arrived on time", "Positive"),
+("came earlier than expected", "Positive"),
+("not unreasonable", "Positive"),
+("not too expensive", "Positive"),
+("not bad at all", "Positive"),
+("not a bad deal", "Positive"),
+("not terrible", "Neutral"),
+("does what it’s supposed to", "Positive"),
+("everything arrived intact", "Positive"),
+("no major issues", "Positive"),
+("price is not unreasonable", "Positive"),
+("not a terrible experience", "Neutral"),
+("not something I'd be satisfied with", "Negative"),
+
+("app wasn’t very smooth", "Negative"),
+("had some trouble using the app", "Negative"),
+("not the easiest app to use", "Negative"),
+("felt a bit confusing at times", "Negative"),
+("things didn’t work as expected", "Negative"),
+("ran into a few issues while using it", "Negative"),
+("not a very smooth experience overall", "Negative"),
+
+# indirect complaints
+("could be easier to navigate", "Negative"),
+("takes time to figure things out", "Negative"),
+("not very intuitive", "Negative"),
+("felt a bit clunky", "Negative"),
+("experience could be better", "Negative"),
+("a bit frustrating to use", "Negative"),
+
+# performance issues
+("app feels slow sometimes", "Negative"),
+("takes time to load pages", "Negative"),
+("not very responsive", "Negative"),
+("lags occasionally", "Negative"),
+("performance isn’t very consistent", "Negative"),
+
+# ordering / checkout issues (IMPORTANT)
+("had trouble placing the order", "Negative"),
+("checkout process was confusing", "Negative"),
+("issues while completing the order", "Negative"),
+("order process wasn’t smooth", "Negative"),
+("faced problems during checkout", "Negative"),
+
+# bugs / errors
+("ran into some bugs", "Negative"),
+("app behaved unexpectedly", "Negative"),
+("things kept glitching", "Negative"),
+("something felt off while using it", "Negative"),
+("not very reliable while using", "Negative"),
+("app works smoothly most of the time", "Positive"),
+("easy enough to use", "Positive"),
+("no major issues while using the app", "Positive"),
+("pretty straightforward to navigate", "Positive"),
+("things worked as expected", "Positive"),
+
+# indirect positive
+("didn’t face any problems", "Positive"),
+("felt easy to get used to", "Positive"),
+("navigation is simple enough", "Positive"),
+("overall smooth experience", "Positive"),
+("everything worked fine", "Positive"),
+("app is okay overall", "Neutral"),
+("works fine but nothing special", "Neutral"),
+("usable but could be better", "Neutral"),
+("not bad but not great either", "Neutral"),
+
+# mixed signals
+("works fine but has some issues", "Neutral"),
+("mostly smooth but had a few problems", "Neutral"),
+("easy to use but slows down sometimes", "Neutral"),
+("good overall but needs some improvements", "Neutral"),
+("I had to try a couple of times to place the order", "Negative"),
+("took me a while to figure out how things work", "Negative"),
+("something didn’t feel right while using the app", "Negative"),
+("it works but not very smoothly", "Neutral"),
+("it’s usable but not the best experience", "Neutral"),
+("eventually managed to place the order", "Neutral"),
+("after a few tries it worked", "Neutral"),
+
 
 ]

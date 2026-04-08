@@ -5,6 +5,12 @@
 
 # from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 # custom_stopwords = list(set(ENGLISH_STOP_WORDS) - {"not", "no"})
+# unique = {}
+
+# for text, labels in data:
+#     unique[text.lower().strip()] = labels  # normalize text
+
+# data = [(text, labels) for text, labels in unique.items()]
 # texts = [x[0] for x in data]
 # labels = [x[1] for x in data]
 
@@ -21,7 +27,7 @@
 #     probs = model.predict_proba(X_test)[0]
 
 #     print("TEXT:", text)
-#     print("PROBS:", list(zip(mlb.classes_, probs)))
+#     print("PROBS:", list(zip(model.classes_, probs)))
 
 #     classes = model.classes_
 

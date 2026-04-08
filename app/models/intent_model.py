@@ -1,4 +1,49 @@
 
+
+# from app.models.train_data import data
+# unique = {}
+
+# for text, labels in data:
+#     unique[text.lower().strip()] = labels  # normalize text
+
+# data = [(text, labels) for text, labels in unique.items()]
+
+# texts = [x[0] for x in data]
+# labels = [x[1] for x in data]
+
+# from sklearn.preprocessing import MultiLabelBinarizer
+
+# mlb = MultiLabelBinarizer()
+# y = mlb.fit_transform(labels)
+
+# from sklearn.feature_extraction.text import TfidfVectorizer
+
+# vectorizer = TfidfVectorizer(
+#     ngram_range=(1,2),
+#     max_features=5000,
+#     stop_words="english"
+# )
+
+# X = vectorizer.fit_transform(texts)
+
+# from sklearn.linear_model import LogisticRegression
+# from sklearn.multiclass import OneVsRestClassifier
+
+# model = OneVsRestClassifier(
+#     LogisticRegression(max_iter=200)
+# )
+
+# model.fit(X, y)
+
+
+# import joblib
+
+# joblib.dump(model, "aspect_model.pkl")
+# joblib.dump(vectorizer, "aspect_vectorizer.pkl")
+# joblib.dump(mlb, "aspect_mlb.pkl")
+
+
+
 import logging
 import joblib
 
@@ -19,139 +64,24 @@ def predict_aspects(text: str):
     predicted = [mlb.classes_[i] for i, p in enumerate(probs) if p >= threshold]
 
     return predicted
-
-# import joblib
-# import os
-
-
-# model = None
-# vectorizer = None
-# def load_model():
-#     global model, vectorizer
-
-#     if model is None or vectorizer is None:
-#         print("Loading aspect model...")
-
-#         base_path = os.path.dirname(__file__)
-
-#         model_path = os.path.join(base_path, "../../aspect_model.pkl")
-#         vectorizer_path = os.path.join(base_path, "../../aspect_vectorizer.pkl")
-
-#         model = joblib.load(model_path)
-#         vectorizer = joblib.load(vectorizer_path)
-
-#         print("Aspect model loaded!")
-
-#     return model, vectorizer
-
-
-# label_map_reverse = {
-#     0: "Delivery",
-#     1: "Product_Quality",
-#     2: "Price",
-#     3: "Packaging",
-#     4: "Customer_Service",
-#     5: "App_Experience"
-# }
-
+# test_sentences = [
+#     "delivery was late",
+#     "product quality is amazing",
+#     "app is very slow and crashes",
+#     "customer support didn't respond",
+#     "worth the money and good quality",
+#     "order arrived on time and box was perfect"
+# ]
 
 # def predict_aspects(text: str):
-#     try:
-#         model, vectorizer = load_model()
+#     X_test = vectorizer.transform([text])
+#     probs = model.predict_proba(X_test)[0]
 
-#         X = vectorizer.transform([text])
+#     print("\nTEXT:", text)
+#     print("PROBS:", list(zip(mlb.classes_, probs)))
 
-#         pred = model.predict(X)[0]
+#     threshold = 0.3
+#     predicted = [mlb.classes_[i] for i, p in enumerate(probs) if p >= threshold]
 
-#         return label_map_reverse.get(pred, "Unknown")
-
-#     except Exception as e:
-#         print("LOCAL MODEL ERROR:", e)
-#         return "Unknown"
-
-
-# import requests
-# import os
-# import time
-# from dotenv import load_dotenv
-
-# # Load env (only works locally, safe for Render too)
-
-# load_dotenv()
-
-
-# HF_API_URL = "https://router.huggingface.co/hf-inference/models/Arbaz04/aspect_model"
-# HF_TOKEN = os.getenv("HF_TOKEN")  # store safely in env
-# print("HF TOKEN:", HF_TOKEN)
-
-# headers = {
-#     "Authorization": f"Bearer {HF_TOKEN}"
-# }
-
-
-# label_map_reverse = {
-#     0: "Delivery",
-#     1: "Product_Quality",
-#     2: "Price",
-#     3: "Packaging",
-#     4: "Customer_Service",
-#     5: "App_Experience"
-# }
-
-# def predict_aspects(text: str):
-#     payload = {"inputs": text}
-
-#     try:
-#         response = requests.post(
-#             HF_API_URL,
-#             headers=headers,
-#             json=payload,
-#             timeout=10
-#         )
-
-#         #  FIX 1: check status code
-#         if response.status_code != 200:
-#             print("HF STATUS ERROR:", response.status_code, response.text)
-#             return "Unknown"
-
-#         #  FIX 2: safe JSON parsing
-#         try:
-#             result = response.json()
-#         except Exception as e:
-#             print("JSON ERROR:", response.text)
-#             return "Unknown"
-
-#         print("HF RAW RESPONSE:", result)
-
-#         #  FIX 3: handle dict errors
-#         if isinstance(result, dict):
-#             print("HF ERROR:", result)
-
-#             if "loading" in result.get("error", "").lower():
-#                 time.sleep(2)
-
-#                 retry = requests.post(
-#                     HF_API_URL,
-#                     headers=headers,
-#                     json=payload
-#                 )
-
-#                 try:
-#                     result = retry.json()
-#                 except:
-#                     return "Unknown"
-
-#                 if isinstance(result, dict):
-#                     return "Unknown"
-#             else:
-#                 return "Unknown"
-
-#         #  safe now
-#         output = result[0]
-
-#         label_index = int(output["label"].split("_")[-1])
-#         return label_map_reverse.get(label_index, "Unknown")
-
-#     except Exception as e:
-#         print("HF CALL FAILED:", e)
-#         return "Unknown"
+#     print("PREDICTED:", predicted)
+#     return predicted
